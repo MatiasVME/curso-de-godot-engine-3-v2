@@ -1,4 +1,4 @@
-# curso-de-godot-engine-3-v2
+# Curso de Godot Engine 3 (V2)
 
 Material para el Curso de Godot Engine en para el canal de FuryCode en Youtube 
 
