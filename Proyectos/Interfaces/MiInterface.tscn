@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://MiInterface.gd" type="Script" id=1]
+
+[node name="MiInterface" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Hbox" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Etiquetas" type="CenterContainer" parent="Hbox"]
+margin_right = 510.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+
+[node name="Vbox" type="VBoxContainer" parent="Hbox/Etiquetas"]
+margin_left = 255.0
+margin_top = 300.0
+margin_right = 255.0
+margin_bottom = 300.0
+
+[node name="Label" type="Label" parent="Hbox/Etiquetas/Vbox"]
+visible = false
+margin_right = 29.0
+margin_bottom = 14.0
+text = "cosa"
+
+[node name="Entrada" type="CenterContainer" parent="Hbox"]
+margin_left = 514.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+
+[node name="VBox" type="VBoxContainer" parent="Hbox/Entrada"]
+margin_left = 155.0
+margin_top = 273.0
+margin_right = 355.0
+margin_bottom = 327.0
+custom_constants/separation = 10
+
+[node name="Entrada" type="LineEdit" parent="Hbox/Entrada/VBox"]
+margin_right = 200.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 200, 0 )
+
+[node name="Enviar" type="Button" parent="Hbox/Entrada/VBox"]
+margin_top = 34.0
+margin_right = 200.0
+margin_bottom = 54.0
+text = "Enviar"
+
+[connection signal="pressed" from="Hbox/Entrada/VBox/Enviar" to="." method="_on_Enviar_pressed"]
